@@ -14,6 +14,9 @@ brew install tree
 brew install git
 brew install git-flow-avh
 brew install wget
+brew install vim
+brew install ctags
+brew install watchman
 
 # INSTALL CASK
 brew tap caskroom/cask
