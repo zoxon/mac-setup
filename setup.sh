@@ -3,6 +3,7 @@
 # INSTALL NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
 
+
 # HOMEBREW
 # Check for Homebrew,
 # Install if we don't have it
@@ -43,6 +44,8 @@ brew cask install qlimagesize
 brew cask install quicklookase
 brew cask install qlvideo
 brew cask install quicklook-pat
+brew cask install epubquicklook
+
 
 # INSTALL GUI APPS
 # Messengers
@@ -62,10 +65,17 @@ brew cask install cakebrew
 brew cask install spectacle
 brew cask install itsycal
 brew cask install f.lux
+brew cask install android-file-transfer
+brew cask install the-unarchiver
 
 # Other
 brew cask install vlc
+brew cask install iina
 brew cask install libreoffice
+brew cask install commander-one
+brew cask install spotify
+brew cask install steam
+brew cask install tunnelbear
 
 # Browsers
 brew cask install google-chrome
@@ -91,8 +101,14 @@ brew cask install owncloud
 brew cask install aerial
 brew cask install padbury-clock
 
-# Cleanup
+# Enabling Automatic Brew Updates & Upgrades
+brew tap domt4/autoupdate
+brew autoupdate --start --upgrade
+
+# Brew cleanup
 brew cleanup
+brew cask cleanup
+
 
 # INSTALL POWERLINE FONTS
 mkdir ~/tmp && cd ~/tmp
@@ -100,6 +116,7 @@ git clone https://github.com/powerline/fonts.git
 cd fonts
 sh -c ./install.sh
 cd ~/tmp && rm -rf ./fonts
+
 
 # ZSH
 # Install Oh-my-zsh
