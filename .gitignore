@@ -29,3 +29,20 @@ Temporary Items
 ### macOS Patch ###
 # iCloud generated files
 *.icloud
+
+### Project specific ###
+# Backup files created during setup
+*.backup
+*.bak
+
+# Temporary files
+tmp/
+temp/
+
+# Logs
+*.log
+logs/
+
+# Local configuration overrides
+local.sh
+.env.local

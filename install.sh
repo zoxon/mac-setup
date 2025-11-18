@@ -6,8 +6,24 @@
 
 set -e
 
-echo "🚀 Starting full macOS setup..."
+# Load configuration and utility functions
+if [ -f "./config.sh" ]; then
+  source ./config.sh
+else
+  echo "❌ config.sh not found! Please run from the project directory."
+  exit 1
+fi
+
+log_info "Starting full macOS setup v${MAC_SETUP_VERSION}..."
 echo "==========================================================="
+
+# Check system compatibility first
+if check_file "./check-compatibility.sh"; then
+  log_step "Running system compatibility check..."
+  bash ./check-compatibility.sh
+else
+  log_warning "Compatibility check script not found, proceeding anyway..."
+fi
 
 # --- Step 1: Bootstrap ---
 if [ -f "./bootstrap.sh" ]; then
